@@ -13,15 +13,10 @@ f90  = gfortran -cpp
 FLAGS =  -O3 #-nogen-interface  
 flag = ${FLAGS}  # -check all -traceback -pg
 
-# blas and lapack libraries
-#libs = -L/opt/intel/oneapi/mkl/2021.2.0/lib/ \
-		-lmkl_intel_lp64 -lmkl_sequential \
-		-lmkl_core     
-# libs = -L/usr/local/lib/ -llapack
+# blas and lapack libraries or intel package
+#libs = -L/opt/intel/oneapi/mkl/2021.2.0/lib/ -lmkl_intel_lp64 -lmkl_sequential -lmkl_core     
 libs = /usr/local/lib/libblas.a /usr/local/lib/liblapack.a
-#libs = /Users/leogoutte/Documents/lapack-3.10.0/liblapack.a
 
- 
 main :  $(obj)
 	$(f90) $(obj) -o tg_kpgen $(libs) 
 #cp tg_kpgen  ../../bin
