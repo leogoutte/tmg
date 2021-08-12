@@ -1,0 +1,85 @@
+   &PARAMETERS
+   number_layers = 5
+   twisted_angle_degree= 5.05
+
+   !> magic angle
+!  twisted_angle_degree= 1.0661
+
+
+! A-BA+BC
+! twisted_angle_array_input = 0   1   1    1   1    1   1   1
+! interlayercoupling_ratio_array_input = 1 1 0 1 
+! stacking_sequences_input ="A" "B" "A" "B" "C"
+
+! A+BA-AB+A
+!  twisted_angle_array_input = 0   0   0    1   1   1   
+!  interlayercoupling_ratio_array_input = 0.01 1 1 1 0.01 
+!  stacking_sequences_input ="A" "B" "A" "A" "B" "A"
+
+! A-BABC
+!  twisted_angle_array_input = 0   1   1    1   1    1   1   1
+!  interlayercoupling_ratio_array_input = 1 1 1 1 
+!  stacking_sequences_input ="A" "B" "A" "B" "C"
+
+! A-BAB
+!  twisted_angle_array_input = 0   1   1    1   1    1   1   1
+!  interlayercoupling_ratio_array_input = 1 1 1 0 
+!  stacking_sequences_input ="A" "B" "A" "B" "C"
+
+
+! A-BA+B
+!  twisted_angle_array_input = 0   1   1    1   1    1   1   1
+!  interlayercoupling_ratio_array_input = 1 1 0.0001 0 
+!  stacking_sequences_input ="A" "B" "A" "B" "C"
+
+
+
+! A-B+ABC
+!  twisted_angle_array_input = 0   1   1    1   1    1   1   1
+!  interlayercoupling_ratio_array_input = 1 0 1 1 
+!  stacking_sequences_input ="A" "B" "A" "B" "C"
+
+! A-B+ABC
+   twisted_angle_array_input = 0 1 1 1 1
+   interlayercoupling_ratio_array_input = 1 0 1 1
+   stacking_sequences_input ="A" "B" "A" "B" "C"
+
+
+!  twisted_angle_array_input = 0   0   0    0   1    1   1   1
+!  stacking_sequences_input ="C" "A" "B" "A" "B" "A" "B" "C"
+!  twisted_angle_array_input = 0   0   0    1   1    1   1   1
+!  stacking_sequences_input = "A" "B" "A" "A" "B" "C" "B" "C"
+
+!  u_AA=0.0797  ! eV  parameters from Phys. Rev. X 8, 031087
+!  u_AB=0.0975  ! eV 
+!  vf=5.253084  ! 2.1354*2.46
+
+   u_AA=0.000   ! eV parameters from PhysRevLett.122.106405
+   u_AB=0.110   ! eV
+   vf= 5.817    ! eV/Angstrom  2.365*2.46
+
+!  vppsigma=0.30d0  ! eV
+!  vppsigma=0.00d0  ! eV
+   vppsigma=0.48d0  ! eV
+   Qcutoff=3
+   Num_bands=40
+   Nk=20   
+   Electric_field =-0.0010 ! eV/Angstrom
+   /
+
+KPATH_BULK
+5
+M  0.0 0.5 K-  0.333333 0.666667 
+K-   0.333333 0.666667  G  0.0 0.0
+G 0.0 0.0  M  0.0 0.5   
+M  0.0 0.5   K+ -0.333333 0.333333 
+K+ -0.333333 0.333333 G  0.0 0.0
+
+
+2
+G  0.22222 0.444444 K-   0.333333 0.666667  
+K-   0.333333 0.666667  G  0.22222 0.444444
+
+K+ -0.333333 0.333333   G 0.0 0.0
+G  0.0 0.0   M  0.0 0.5
+M  0.0 0.5  K-   0.333333 0.666667
