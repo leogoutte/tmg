@@ -1,4 +1,4 @@
-# tmg
+# Twisted Mixed Multilayer Graphene: a Tunable K dot P Model Spectrum
 The source code for "Twisted Mixed Multilayer Graphene: a Tunable K dot P Model Spectrum" widget. 
 
 To compile:
